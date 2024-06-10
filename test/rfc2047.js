@@ -50,9 +50,9 @@ describe('rfc2047', () => {
         // https://github.com/One-com/rfc2047/issues/11
         it('should handle a string with multiple emojis in a row', () => {
           expect(
-            'Seven hills😍🦌',
+            'Seven hills 😍🦌😍🦌😍 no extra spaces',
             'to encode back and forth to',
-            'Seven =?utf-8?Q?hills=F0=9F=98=8D=F0=9F=A6=8C?='
+            'Seven hills =?utf-8?Q?=F0=9F=98=8D=F0=9F=A6=8C=F0=9F=98=8D=F0=9F=A6=8C=F0=9F=98=8D?= no extra spaces'
           );
         });
 
